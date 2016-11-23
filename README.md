@@ -1,22 +1,6 @@
-Pliny the Younger wrote what many consider the first ghost story. Similarly, Pliny aims to be the origin of many themes for the Ghost blogging platform. Using Sass and Grunt, Pliny brings modern front-end tools to an ancient story.
+## Ghost theme for jaredfischler.com
 
-![Pliny the Younger](https://raw.github.com/ascott1/Pliny/master/assets/img/pliny.jpg)
-
-## Dependencies
-
-Pliny relies on:
-
-* [node/npm](http://nodejs.org/)
-* Grunt: `npm install -g grunt-cli`
-* Sass: `gem install sass`
-
-## Getting Started
-
-1. Clone the repo into your Ghost `themes` directory `git clone git@github.com:ascott1/Pliny.git`
-2. `cd` into the directory and run `npm install`
-3. Run `grunt watch` to keep an eye on your Sass and JavaScript files
-
-## License
+## License (from base theme)
 
 The MIT License (MIT)
 
