@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>{{meta_title}}</title>
+    <meta name="description" content="{{meta_description}}" />
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    {{! fonts }}
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+    {{! styles }}
+    <link rel="stylesheet" type="text/css" href="{{asset "css/bootstrap-flex.min.css"}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset "css/main.css"}}" />
+
+    {{! templates }}
+    <script id="home-post-template" type="text/x-handlebars-template">
+        <div id="home-post-\{{slug}}" class="home-post col-md-4" style="background-image: url(\{{image}})">
+            <a href="\{{url}}">
+                <article class="title-overlay \{{post_class}}">
+                    <div class="title"><h2>\{{title}}</h2></div>
+                </article>
+            </a>
+        </div>
+    </script>
+
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+
+    {{! Ghost outputs important style and meta data with this tag }}
+    {{ghost_head}}
+</head>
+<body class="{{body_class}}">
+    <div id="top-header">
+        <div class="row">
+            <div class="col-md-4 left-align"></div>
+            <div class="col-md-4 center-align">
+                <div id="logo"></div>
+            </div>
+            <div class="col-md-4 right-align">
+                {{navigation}}
+            </div>
+        </div>
+    </div>
+
+
+    {{! Everything else gets inserted here }}
+    {{{body}}}
+
+    {{!-- <footer class="site-footer clearfix">
+        <section class="copyright"><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}</section>
+        <section class="poweredby">Proudly published with <a href="https://ghost.org">Ghost</a></section>
+    </footer> --}}
+
+
+
+    {{! Ghost outputs important scripts and data with this tag }}
+    {{ghost_foot}}
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/axios/0.15.2/axios.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js"></script>
+
+    {{! JavaScript }}
+    <script type="text/javascript" src="/assets/js/main.js"></script>
+
+</body>
+</html>

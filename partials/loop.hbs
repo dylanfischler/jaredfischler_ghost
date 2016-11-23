@@ -1,0 +1,12 @@
+{{! This is the post loop - each post will be output using this markup }}
+
+
+{{#get "posts" limit="all"}}
+    {{#foreach posts}}
+        <div class="home-post col-md-4" style="background-image: url({{image}})">
+            <article class="title-overlay {{post_class}}">
+                <div class="title"><h2>{{title}}</h2></div>
+            </article>
+        </div>
+    {{/foreach}}
+{{/get}}

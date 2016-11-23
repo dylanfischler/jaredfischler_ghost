@@ -1,0 +1,35 @@
+@mixin transition($duration: 0.1s){
+  -webkit-transition: all $bezier $duration;
+  transition: all $bezier $duration;
+}
+
+@mixin link-style() {
+  color: $light-gray-color;
+  @include transition();
+
+  &:hover {
+    text-decoration: none;
+    color: #fff;
+  }
+
+  &:active {
+    color: $accent-color;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+@mixin vertical-align() {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+@mixin global-text-style() {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
