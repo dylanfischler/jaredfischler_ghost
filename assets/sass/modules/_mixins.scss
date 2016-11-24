@@ -33,3 +33,8 @@
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
+
+@mixin global-margin-style() {
+  width:90%;
+  margin:5%;
+}

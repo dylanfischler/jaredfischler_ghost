@@ -1,6 +1,11 @@
 {{!< default}}
 {{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
 
+<script type="text/javascript">
+    var jaredBlog = new Blog();
+    jaredBlog.initPostGrid();
+</script>
+
 {{! The big featured header }}
 {{!-- <header class="main-header {{#if @blog.cover}}" style="background-image: url({{@blog.cover}}){{else}}no-cover{{/if}}">
     <nav class="main-nav overlay clearfix">
@@ -14,12 +19,12 @@
         </div>
     </div>
 </header> --}}
-<div id="tag-navigator">
+<div id="tag-navigator" class="page-subhead">
     <ul>
-        <li class="tag-link slug-all active"><button onclick="filterPosts()">All</button></li>
+        <li class="tag-link slug-all active"><button onclick="jaredBlog.filterPosts('all')">All</button></li>
         {{#get "tags" limit="all"}}
           {{#foreach tags}}
-            <li class="tag-link slug-{{slug}}"><button onclick="filterPosts('{{slug}}')">{{name}}</button></li>
+            <li class="tag-link slug-{{slug}}"><button onclick="jaredBlog.filterPosts('{{slug}}')">{{name}}</button></li>
           {{/foreach}}
         {{/get}}
     </ul>

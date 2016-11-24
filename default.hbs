@@ -36,7 +36,7 @@
         <div class="row">
             <div class="col-md-4 left-align"></div>
             <div class="col-md-4 center-align">
-                <div id="logo"></div>
+                <a href="/"><div id="logo"></div></a>
             </div>
             <div class="col-md-4 right-align">
                 {{navigation}}
@@ -44,6 +44,12 @@
         </div>
     </div>
 
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/axios/0.15.2/axios.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js"></script>
+
+    {{! JavaScript }}
+    <script type="text/javascript" src="/assets/js/main.js"></script>
 
     {{! Everything else gets inserted here }}
     {{{body}}}
@@ -53,17 +59,12 @@
         <section class="poweredby">Proudly published with <a href="https://ghost.org">Ghost</a></section>
     </footer> --}}
 
-
-
     {{! Ghost outputs important scripts and data with this tag }}
     {{ghost_foot}}
 
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/axios/0.15.2/axios.min.js"></script>
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js"></script>
+    
 
-    {{! JavaScript }}
-    <script type="text/javascript" src="/assets/js/main.js"></script>
+
 
 </body>
 </html>

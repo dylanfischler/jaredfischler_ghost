@@ -2,11 +2,14 @@
 @import "../modules/mixins";
 
 body {
-  background: #000;
+  // background: #000;
+  // background: #fff;
+  background: #0d0d0d;
 }
 
 #top-header {
   padding: 20px;
+  background-color: #000;
   background-image: url("/assets/img/top_bg.png");
   background-size: 100%;
 }
@@ -46,12 +49,14 @@ nav {
   }
 }
 
-#tag-navigator {
+.page-subhead {
   background: $dark-gray-color;
   width:100%;
   padding: 15px;
   text-align: center;
+}
 
+#tag-navigator {
   ul {
     margin:0;
     padding:0;
@@ -75,6 +80,10 @@ nav {
       }
     }
   }
+}
+
+#post-loop {
+  color: #fff;
 }
 
 .home-post {
@@ -122,6 +131,75 @@ nav {
   &:hover {
     .title-overlay {
       opacity: 1;
+    }
+  }
+}
+
+.post-title {
+  @include global-text-style();
+  font-size: 16px;
+  color: #fff;
+}
+
+/* Post Page */
+.post-template {
+  .post-head {
+    width: 100vw;
+    // height: 100vh;
+    color: #000;
+
+    .row {
+      // height: 100%;
+      // @include global-margin-style();
+
+      & > * {
+        // height:100%;
+      }
+    }
+
+    .page-subhead {
+      color: #fff;
+    }
+
+
+
+    .cover-image {
+      background-size: cover;
+      padding: 0px;
+
+      img { @include global-margin-style(); }
+    }
+    .cover-description {
+      padding-left: 0px;
+
+      .content {
+        // background-color: #fff;
+        color: #fff;
+        padding: 30px;
+      }
+
+      .post-title {
+        font-size: 20px;
+        text-decoration: underline;
+      }
+    }
+
+    
+    .post-subtitle {
+      @include global-text-style();
+      font-size: 14px;
+      line-height: 1.3em;
+      color: $light-gray-color;
+      margin-top: 5px;
+    }
+  }
+  & > .content {
+    @include global-margin-style();
+    text-align: center;
+    color: #fff;
+
+    img {
+      width: 80%;
     }
   }
 }
