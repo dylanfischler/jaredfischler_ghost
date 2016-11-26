@@ -81,6 +81,14 @@ window.Menu = (function() {
     this.state = false;
     this.elements = [];
     [].push.apply(this.elements, arguments);
+
+    $(".menu-button").click(function(e) {
+      e.stopPropagation();
+    })
+
+    $("#main-wrap").click(function() {
+      if(self.state) self.toggle();
+    });
   }
 
   Menu.prototype.toggle = function() {

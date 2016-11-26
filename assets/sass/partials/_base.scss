@@ -7,6 +7,22 @@ body {
   background: #0d0d0d;
 }
 
+body > .overlay {
+  position:fixed;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0);
+  pointer-events: none;
+  z-index: 10;
+  @include transition();
+
+  &.open {
+    background-color: rgba(0,0,0,0.7);
+  }
+}
+
 #main-wrap {
   overflow: hidden;
   @include transition(0.3s);
@@ -26,7 +42,7 @@ body {
   right: 0px;
   width: 300px;
   height: 100%;
-  z-index: 10;
+  z-index: 20;
   background-color: #222;
   transform: translateX(300px);
   padding: 30px;
@@ -47,6 +63,7 @@ body {
   border: none;
   color: #fff;
   padding: 5px 8px;
+  z-index: 20;
 
   &:focus { outline: none; }
 

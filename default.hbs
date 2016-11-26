@@ -36,6 +36,7 @@
     <div id="mobile-nav" class="hidden-lg-up">
         {{navigation}}
     </div>
+    <div class="overlay"></div>
     <div id="main-wrap">
         <div id="top-header">
             <div class="logo-wrap">
@@ -65,7 +66,7 @@
         <script type="text/javascript" src="/assets/js/main.js"></script>
 
         <script type="text/javascript">
-            var menu = new Menu('#main-wrap', '#mobile-nav', '.menu-button');
+            var menu = new Menu('#main-wrap', '#mobile-nav', '.menu-button', '.overlay');
         </script>
 
         {{! Everything else gets inserted here }}
