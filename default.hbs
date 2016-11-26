@@ -10,6 +10,7 @@
 
     {{! fonts }}
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="stylesheet" href="{{asset "css/font-awesome.min.css"}}">
 
     {{! styles }}
     <link rel="stylesheet" type="text/css" href="{{asset "css/bootstrap-flex.min.css"}}" />
@@ -32,39 +33,51 @@
     {{ghost_head}}
 </head>
 <body class="{{body_class}}">
-    <div id="top-header">
-        <div class="row">
-            <div class="col-md-4 left-align"></div>
-            <div class="col-md-4 center-align">
+    <div id="mobile-nav" class="hidden-lg-up">
+        {{navigation}}
+    </div>
+    <div id="main-wrap">
+        <div id="top-header">
+            <div class="logo-wrap">
                 <a href="/"><div id="logo"></div></a>
             </div>
-            <div class="col-md-4 right-align">
+            <div class="nav-wrap hidden-md-down">
                 {{navigation}}
             </div>
+            <div class="nav-wrap hidden-lg-up">
+                <button class="menu-button" onclick="menu.toggle()"><span class=""></span></button>
+            </div>
+
+                {{!-- <div class="col-md-4 left-align"></div>
+                <div class="col-md-4 center-align">
+                    <a href="/"><div id="logo"></div></a>
+                </div>
+                <div class="col-md-4 right-align">
+                    {{navigation}}
+                </div> --}}
         </div>
+
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/axios/0.15.2/axios.min.js"></script>
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js"></script>
+
+        {{! JavaScript }}
+        <script type="text/javascript" src="/assets/js/main.js"></script>
+
+        <script type="text/javascript">
+            var menu = new Menu('#main-wrap', '#mobile-nav', '.menu-button');
+        </script>
+
+        {{! Everything else gets inserted here }}
+        {{{body}}}
+
+        {{!-- <footer class="site-footer clearfix">
+            <section class="copyright"><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}</section>
+            <section class="poweredby">Proudly published with <a href="https://ghost.org">Ghost</a></section>
+        </footer> --}}
+
+        {{! Ghost outputs important scripts and data with this tag }}
+        {{ghost_foot}}
     </div>
-
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/axios/0.15.2/axios.min.js"></script>
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js"></script>
-
-    {{! JavaScript }}
-    <script type="text/javascript" src="/assets/js/main.js"></script>
-
-    {{! Everything else gets inserted here }}
-    {{{body}}}
-
-    {{!-- <footer class="site-footer clearfix">
-        <section class="copyright"><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}</section>
-        <section class="poweredby">Proudly published with <a href="https://ghost.org">Ghost</a></section>
-    </footer> --}}
-
-    {{! Ghost outputs important scripts and data with this tag }}
-    {{ghost_foot}}
-
-    
-
-
-
 </body>
 </html>
