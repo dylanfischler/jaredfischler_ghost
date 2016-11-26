@@ -47,7 +47,7 @@ body {
   border: none;
   color: #fff;
   padding: 5px 8px;
-  
+
   &:focus { outline: none; }
 
   & > span {
@@ -285,9 +285,11 @@ nav {
     @include global-margin-style();
     text-align: center;
     color: #fff;
-
-    img, iframe {
-      width: 80%;
-    }
+  }
+}
+.post-content {
+  img, iframe {
+    width: 80%;
+    margin: 0 10%;
   }
 }
