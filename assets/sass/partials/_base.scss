@@ -133,10 +133,16 @@ $header-padding: 20px;
 
   .logo-wrap {
     position: absolute;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    margin-top:13px;
+    text-align: center;
+    pointer-events: none;
 
     a {
-      display: flex; 
-      align-items: center;
+      display: inline-block;
+      pointer-events: auto;
     }
   }
 }
@@ -233,13 +239,13 @@ nav {
   background-color: rgb(28, 28, 28);
   background-position: top center;
   background-size: cover;
-  padding:0;
+  padding: 0;
   overflow:hidden;
-  opacity: 0;
-  @include transition(0.2s);
+  // opacity: 0;
+  // @include transition(0.2s);
 
   &.displayed {
-    opacity: 1;
+    // opacity: 1;
   }
 
   a {
