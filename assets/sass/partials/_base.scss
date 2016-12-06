@@ -347,8 +347,36 @@ nav {
   }
 }
 .post-content {
+  text-align: center;
+  
   img, iframe {
     width: 80%;
     margin: 0 10%;
   }
+
+  h1, h2, h3, h4, h5, h6 {
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 1em !important;
+  }
+
+  p {
+    color: $light-gray-color;
+  }
+}
+
+.content.page {
+  color: #fff;
+  // text-align: center;
+  margin-top: 20px;
+
+  // h1, h2, h3, h4, h5, h6 {
+  //   text-transform: uppercase;
+  //   letter-spacing: 0.05em;
+  //   font-size: 1em !important;
+  // }
+
+  // p {
+  //   color: $light-gray-color;
+  // }
 }
