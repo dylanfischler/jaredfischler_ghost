@@ -208,6 +208,8 @@ nav {
     margin:0;
     padding:0;
     overflow: auto;
+    overflow-scrolling: touch;
+    -webkit-overflow-scrolling: touch;
     white-space: nowrap;
     padding: 15px 30px;
 
