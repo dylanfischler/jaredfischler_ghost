@@ -200,9 +200,16 @@ nav {
 }
 
 #tag-navigator {
+  &.page-subhead {
+    padding:0;
+  }
+
   ul {
     margin:0;
     padding:0;
+    overflow: auto;
+    white-space: nowrap;
+    padding: 15px 30px;
 
     @media screen and (max-width: 992px) {
       text-align: left;
@@ -379,4 +386,59 @@ nav {
   // p {
   //   color: $light-gray-color;
   // }
+}
+
+.page_resume {
+  text-align:left;
+
+  .post-content {
+    text-align: left;
+
+    p, h2, h3, h4, h5, h6 {
+      margin-left: 40px;
+    }
+  }
+
+
+}
+
+@media (min-width: 576px) {
+  .container-small {
+      width: 540px;
+      max-width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .container-small {
+      width: 720px;
+      max-width: 100%;
+  }
+}
+
+@media (min-width: 992px) {
+  .container-small {
+      width: 760px;
+      max-width: 100%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container-small {
+      width: 940px;
+      max-width: 100%;
+  }
+}
+
+.container-small {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.logo {
+  text-align: left;
+  color: #fff;
+  // @include global-text-style();
 }

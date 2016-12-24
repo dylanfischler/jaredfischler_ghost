@@ -40,14 +40,25 @@
     <div class="overlay"></div>
     <div id="main-wrap">
         <div id="top-header">
-            <div class="logo-wrap">
+            <div class="logo-wrap hidden-xs-down">
                 <a href="/"><div id="logo"></div></a>
             </div>
-            <div class="nav-wrap hidden-md-down">
-                {{navigation}}
+            <div class="nav-wrap hidden-md-down row">
+                <div class="col-md-6 logo">
+                    Jared Fischler
+                </div>
+                <div class="navigation col-md-6">
+                    {{navigation}}
+                </div>
             </div>
-            <div class="nav-wrap hidden-lg-up">
-                <button class="menu-button" onclick="menu.toggle()"><span class=""></span></button>
+            <div class="nav-wrap hidden-lg-up row">
+                <div class="col-xs-6 logo">
+                    Jared Fischler
+                </div>
+                <div class="col-xs-6">
+                    <button class="menu-button" onclick="menu.toggle()"><span class=""></span></button>
+                </div>
+                
             </div>
 
                 {{!-- <div class="col-md-4 left-align"></div>
